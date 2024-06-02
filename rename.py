@@ -5,9 +5,14 @@ directory = sys.path[0]+r"\files"
 
 # def rename_files(directory, new_name_template):
 #     # Get a list of files in the directory
-print(directory)
-# files = os.listdir(directory)
-# print(files)
+
+files = os.listdir(directory)
+
+counter = 11
+for file in files:
+   counter= counter+1
+   os.rename(os.path.join(directory, file), os.path.join(directory, 'xyz_' + str(counter) + '.pdf'))
+
     
 #     for count, filename in enumerate(files):
 #         # Construct the new file name
